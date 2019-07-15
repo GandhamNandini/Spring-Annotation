@@ -4,6 +4,7 @@ import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.*;
 
 
+
 @Configuration
 @PropertySource("classpath:/values.properties")
 public class ConfigClass {
@@ -15,7 +16,7 @@ public class ConfigClass {
         return actor;
 
     }
-    @Bean(name={"Arya","DJ"})
+    @Bean(name={"DJ","Arya"})
     public Movie movieBean()//bean name is movieBean
     {
         Movie movie=new Movie();

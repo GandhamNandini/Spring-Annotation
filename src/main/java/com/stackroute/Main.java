@@ -11,8 +11,8 @@ public class Main {
         Object ob;
         // System.out.println("Hello");
         AbstractApplicationContext context=new AnnotationConfigApplicationContext(ConfigClass.class);
-        context.getBean("Arya", Movie.class).show();
-        context.getBean("Prabhas", Actor.class).act();
+        context.getBean("DJ", Movie.class).show();
+        context.getBean("Prabhas",Actor.class).act();
 
 //        System.out.println("loaded");
         /*Movie movie=context.getBean("wanted",Movie.class);
@@ -36,4 +36,5 @@ public class Main {
 
 
     }
+
 }
