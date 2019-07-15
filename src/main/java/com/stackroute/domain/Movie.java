@@ -17,12 +17,12 @@ public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNam
     @PostConstruct
     public void init()
     {
-        System.out.println(nameOfBean+"  initialized---------------");
+        System.out.println(movieName +"  initialized---------------");
     }
     @PreDestroy
     public void destroy()
     {
-        System.out.println(nameOfBean+" Destroyed  ------------");
+        System.out.println(movieName +" Destroyed  ------------");
     }
 
 
@@ -30,7 +30,7 @@ public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNam
     @Autowired
     Actor actor;
     @Value("${movie.name}")
-    String nameOfBean;
+    String movieName;
     private ApplicationContext applicationContext;
     public Movie(){}
     public void show(){
@@ -54,7 +54,7 @@ public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNam
 //    }
 //
 //    public void setBeanName(String s) {
-//        nameOfBean=s;
+//        movieName=s;
 //
 //    }
     public void setBeanName(String beanName) {
