@@ -6,11 +6,12 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.support.AbstractApplicationContext;
 
 public class Main {
-    public static void main(String[] args) {
-        Object ob;
-        // System.out.println("Hello");
-        AbstractApplicationContext context = new AnnotationConfigApplicationContext(ConfigClass.class);
-        context.getBean("Darling", Movie.class).act();
+
+        public static void main(String[] args) {
+            Object ob;
+            // System.out.println("Hello");
+            AbstractApplicationContext context=new AnnotationConfigApplicationContext(ConfigClass.class);
+            context.getBean("Arya", Movie.class).act();
 
 //        System.out.println("loaded");
         /*Movie movie=context.getBean("wanted",Movie.class);
@@ -30,5 +31,8 @@ public class Main {
         context.registerShutdownHook();*/
 
 
-    }
+
+
+
+        }
     }

@@ -2,7 +2,18 @@ package com.stackroute.domain;
 
 import org.springframework.context.ApplicationContext;
 
-public class Movie {
+public class Movie /*implements*//* ApplicationContextAware, BeanFactoryAware,*//* BeanNameAware*/ {
+    /*public void init()
+    {
+        System.out.println(nameOfBean+"  initialized");
+    }
+    public void destroy()
+    {
+        System.out.println(nameOfBean+" Destroyed Movie ");
+    }*/
+
+
+
     Actor actor;
     String nameOfBean;
     private ApplicationContext applicationContext;
