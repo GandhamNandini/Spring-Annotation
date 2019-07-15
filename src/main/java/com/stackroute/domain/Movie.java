@@ -1,6 +1,9 @@
 package com.stackroute.domain;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
+
 
 public class Movie /*implements*//* ApplicationContextAware, BeanFactoryAware,*//* BeanNameAware*/ {
     /*public void init()
@@ -13,33 +16,40 @@ public class Movie /*implements*//* ApplicationContextAware, BeanFactoryAware,*/
     }*/
 
 
-
+    @Autowired
     Actor actor;
+    @Value("${movie.name}")
     String nameOfBean;
     private ApplicationContext applicationContext;
-    public Movie(){}
-    public void show(){
+
+    public Movie() {
+    }
+
+    public void show() {
+
         System.out.println("Its movie time");
-    }
-
-    public Movie(Actor actor) {
-        this.actor = actor;
-    }
-
-    public void act()
-    {
         actor.act();
     }
+}
 
-    public Movie setActor(Actor actor) {
-        this.actor = actor;
-        return this;
-    }
-
-    public void setBeanName(String s) {
-        nameOfBean=s;
-
-    }
+//    public Movie(Actor actor) {
+//        this.actor = actor;
+//    }
+//
+//    public void act()
+//    {
+//        actor.act();
+//    }
+//
+//    public Movie setActor(Actor actor) {
+//        this.actor = actor;
+//        return this;
+//    }
+//
+//    public void setBeanName(String s) {
+//        nameOfBean=s;
+//
+//    }
 //    public void setBeanName(String beanName) {
 //        System.out.println("Name of the bean is:-"+beanName);}
 //
@@ -52,5 +62,4 @@ public class Movie /*implements*//* ApplicationContextAware, BeanFactoryAware,*/
 //        this.applicationContext=applicationContext;
 //        System.out.println("Container Detail is :-"+applicationContext);
 //
-//    }
-}
+//    }}

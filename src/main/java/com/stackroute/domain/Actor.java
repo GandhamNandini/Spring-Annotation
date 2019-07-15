@@ -1,35 +1,23 @@
 package com.stackroute.domain;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class Actor {
+    @Value("${actor.name}")
     private String name;
+
+    @Value("${actor.gender}")
     private String gender;
+
+    @Value("${actor.age}")
     private int age;
     public Actor(){}
 
 
-    public Actor(String name, String gender, int age) {
-        this.name = name;
-        this.gender = gender;
-        this.age = age;
-    }
+
 
     public void act()
     {
-        System.out.println(this.name+" is the lead actor");
-    }
-
-    public Actor setName(String name) {
-        this.name = name;
-        return this;
-    }
-
-    public Actor setGender(String gender) {
-        this.gender = gender;
-        return this;
-    }
-
-    public Actor setAge(int age) {
-        this.age = age;
-        return this;
+        System.out.println(this.name+" is acting");
     }
 }
